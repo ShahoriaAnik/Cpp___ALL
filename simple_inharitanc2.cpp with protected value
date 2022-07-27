@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+class person{
+    private:
+     string name;
+    protected:
+     int age;
+    public:
+      void getInfo(string n,int a){
+          name=n;
+          age=a;
+      }
+      display(){
+          cout<<name<<" "<<age<<" ";
+      }
+};
+class teacher : public person{
+
+    string doj;
+    string des;
+    public:
+       void getInfo_t(string n,int a,string d,string de){
+           getInfo(n,a);
+           doj=d;
+           des=de;
+       }
+       void display_t(){
+           display();
+           cout<<doj<<" "<<des<<" ";
+       }
+
+};
+
+int main()
+{
+    teacher t1;
+    t1.getInfo_t("rafat",29,"16/DES/1771","lecturer");
+    t1.display_t();
+
+    return 0;
+}
