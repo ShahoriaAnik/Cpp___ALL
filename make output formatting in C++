@@ -1,0 +1,30 @@
+#include <iostream>
+#include<conio.h>//this is for getch() carector
+#include<iomanip>//this is for setprecision(10);
+
+using namespace std;
+
+int main()
+{
+    float num1,num2;
+    
+    cout<<"enter 2 number:";
+    cin>>num1 >>num2;
+    
+    cout<<showpoint;//this is for showing dacimal point 
+    cout<<fixed;// for this, there will count after point dacimal number
+    cout<<setprecision(10);//for this 10 dacimal point will show 
+    
+    float sum = num1+num2;
+    cout<<setw(25)<<"sum :"<<sum <<endl; //(setw(25)) for print space with the output
+    float sub = num1-num2;
+    cout<<setw(25)<<"sub :"<<sub <<endl;
+    
+    cout<<noshowpoint;//after this will not showing any dacimal point
+    float mult = num1*num2;
+    cout<<setw(25)<<"mult :"<<mult <<endl;
+    float divi = num1/num2;
+    cout<<setw(25)<<"division :"<<divi <<endl;
+
+    getch ();
+}
