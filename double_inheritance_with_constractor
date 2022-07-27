@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+class shape{
+  protected:
+    int height,width,length;
+  public:
+    shape(int h){
+       height=h;
+    }
+    shape(int w,int l){
+        width=w;
+        length=l;
+    }
+};
+
+class Triangle : public shape{
+  private:
+    int base;
+  public:
+      Triangle(int b,int h) : shape(h){
+        base=b;
+      }
+    float area(){
+        return 0.5*base*height;
+    }
+};
+
+class Rectangle : public shape{
+public:
+    Rectangle(int w,int l): shape(w,l){
+    }
+    float area_r(){
+        return width*length;
+    }
+};
+
+int main()
+{
+    Triangle t1(10,20);
+    cout<<t1.area()<<endl;
+
+    Rectangle r1(20,30);
+    cout<<r1.area_r()<<endl;
+
+    return 0;
+}
